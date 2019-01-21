@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'name' => 'Icommerceups'
+    'name' => 'Icommerceups',
+    'shippingName' => 'icommerceups'
 ];

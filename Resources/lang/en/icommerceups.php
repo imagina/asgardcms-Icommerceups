@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'single' => 'UPS',
+    'description' => 'The description of module',
     'list resource' => 'List icommerceups',
     'create resource' => 'Create icommerceups',
     'edit resource' => 'Edit icommerceups',
@@ -14,6 +16,13 @@ return [
         'create icommerceups' => 'Create a icommerceups',
     ],
     'table' => [
+        'accessKey' => 'Access Key',
+        'userId' => 'User Id',
+        'password' => 'Password',
+        'shipperPostalCode' => 'Shipper Postalcode',
+        'shipperStateCode' => 'Shipper Statecode',
+        'shipperCountryCode' => 'Shipper Countrycode',
+        'mode' => 'Mode',
     ],
     'form' => [
     ],

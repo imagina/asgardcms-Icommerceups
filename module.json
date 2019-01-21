@@ -1,7 +1,7 @@
 {
     "name": "Icommerceups",
     "alias": "icommerceups",
-    "description": "",
+    "description": "UPS - ShippingMethod Module to Icommerce",
     "keywords": [],
     "version": "1.0.0",
 	"active": 1,

@@ -38,6 +38,7 @@ class IcommerceupsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishConfig('icommerceups', 'permissions');
+        $this->publishConfig('icommerceups', 'config');
 
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
     }

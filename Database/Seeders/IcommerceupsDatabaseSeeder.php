@@ -4,6 +4,7 @@ namespace Modules\Icommerceups\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Icommerce\Entities\ShippingMethod;
 
 class IcommerceupsDatabaseSeeder extends Seeder
 {
@@ -16,6 +17,24 @@ class IcommerceupsDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        $options['init'] = "Modules\Icommerceups\Http\Controllers\Api\IcommerceUpsApiController";
+        $options['accessKey'] = "";
+        $options['userId'] = "";
+        $options['password'] = "";
+        $options['mode'] = "sandbox";
+        $options['shipperPostalCode'] = "";
+        $options['shipperStateCode'] = "";
+        $options['shipperCountryCode'] = "";
+
+        $params = array(
+            'title' => trans('icommerceups::icommerceups.single'),
+            'description' => trans('icommerceups::icommerceups.description'),
+            'name' => config('asgard.icommerceups.config.shippingName'),
+            'status' => 0,
+            'options' => $options
+        );
+
+        ShippingMethod::create($params);
+
     }
 }
