@@ -1,0 +1,18 @@
+{
+    "name": "Icommerceups",
+    "alias": "icommerceups",
+    "description": "",
+    "keywords": [],
+    "version": "1.0.0",
+	"active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Icommerceups\\Providers\\IcommerceupsServiceProvider",
+        "Modules\\Icommerceups\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}
