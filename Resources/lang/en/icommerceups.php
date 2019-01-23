@@ -27,6 +27,7 @@ return [
     'form' => [
     ],
     'messages' => [
+        'msjini' => "You must enter a Postal Code and Country"
     ],
     'validation' => [
     ],

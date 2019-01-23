@@ -23,5 +23,14 @@
     - Shipper Countrycode
 
 ## API
+    
+    ### Parameters
+        * @param Requests request
+        * @param Requests array products - items (object)
+        * @param Requests array products - total
+        * @param Requests array options - countryCode
+        * @param Requests array options - postCode
+        * @param Requests array options - country
 
-    https://icommerce.imagina.com.co/api/icommerceups
+    ### Example
+        https://icommerce.imagina.com.co/api/icommerceups
