@@ -26,11 +26,11 @@
     
     ### Parameters
         * @param Requests request
-        * @param Requests array products - items (object)
-        * @param Requests array products - total
-        * @param Requests array options - countryCode
-        * @param Requests array options - postCode
-        * @param Requests array options - country
+        * @param Requests array "products" - items (object) 
+        * @param Requests array "products" - total (float)
+        * @param Requests array "options" - countryCode (string)
+        * @param Requests array "options" - postCode (varchar)
+        * @param Requests array "options" - country (string)
 
     ### Example
         https://icommerce.imagina.com.co/api/icommerceups
