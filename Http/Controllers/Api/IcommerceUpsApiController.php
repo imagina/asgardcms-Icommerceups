@@ -36,7 +36,7 @@ class IcommerceUpsApiController extends BaseApiController
      * @param Requests array options - countryCode
      * @param Requests array options - postCode
      * @param Requests array options - country
-     * @return route
+     * @return mixed
      */
     public function init(Request $request){
             
