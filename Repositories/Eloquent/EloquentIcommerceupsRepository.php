@@ -174,13 +174,14 @@ class EloquentIcommerceupsRepository extends EloquentBaseRepository implements I
 
             foreach ($rates->RatedShipment as $key => $rate) {
                 
+                $price = $rate->TotalCharges->MonetaryValue;
+
                 $resultMethods[$key] = [
                     "configName" => $rate->Service->getName(),
                     "configTitle" => $rate->Service->getName(),
-                    "price" => $rate->TotalCharges->MonetaryValue
+                    "price" => "{$price}"
                 ];
  
-                
             }
             
             $response["status"] = "success";
