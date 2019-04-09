@@ -26,15 +26,34 @@ class IcommerceupsDatabaseSeeder extends Seeder
         $options['shipperStateCode'] = "";
         $options['shipperCountryCode'] = "";
 
-        $params = array(
-            'title' => trans('icommerceups::icommerceups.single'),
-            'description' => trans('icommerceups::icommerceups.description'),
-            'name' => config('asgard.icommerceups.config.shippingName'),
-            'status' => 0,
-            'options' => $options
-        );
+        $titleTrans = 'icommerceups::icommerceups.single';
+        $descriptionTrans = 'icommerceups::icommerceups.description';
 
-        ShippingMethod::create($params);
+        foreach (['en', 'es'] as $locale) {
+
+            if($locale=='en'){
+                $params = array(
+                    'title' => trans($titleTrans),
+                    'description' => trans($descriptionTrans),
+                    'name' => config('asgard.icommerceups.config.shippingName'),
+                    'status' => 0,
+                    'options' => $options
+                );
+
+                $shippingMethod = ShippingMethod::create($params);
+                
+            }else{
+
+                $title = trans($titleTrans,[],$locale);
+                $description = trans($descriptionTrans,[],$locale);
+
+                $shippingMethod->translateOrNew($locale)->title = $title;
+                $shippingMethod->translateOrNew($locale)->description = $description;
+
+                $shippingMethod->save();
+            }
+
+        }// Foreach
 
     }
 }
